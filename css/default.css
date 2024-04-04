@@ -1,0 +1,34 @@
+@import url(https://fonts.googleapis.com/css?family=Inter:100,200,300,regular,500,600,700,800,900);
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    outline: none;
+    border: none;
+    font-family: 'INTER';
+}
+
+body {
+    overflow-x: hidden;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+:root {
+    --primary-color: #1B1E2A;
+    --secondary-color: #E1E5EE;
+
+
+    /* FONTS - (FONT_WEIGHT, FONT_SIZE, ETC...)*/
+    --logo-fontSize: 20px;
+    --title-fontSize: 40px;
+    --paragraph-fontSize: 14px;
+
+
+    /* OTHERS */
+    --main-inline-padding: 30px;
+
+}
