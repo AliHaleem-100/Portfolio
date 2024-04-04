@@ -204,6 +204,14 @@ header .navbar {}
         display: none;
     }
 
+    .bar-icon:hover .line {
+        margin-block: 5px;
+    }
+
+    .bar-icon.cross .line {
+        margin-block: 0px;
+    }
+
 
     .banner-circle {
         right: -260px;
@@ -217,7 +225,7 @@ header .navbar {}
     }
 
     .banner-circle.show {
-        right: -120%;
+        right: -147%;
         top: 50%;
         transform: translate(-50%, -50%);
         width: 1200px;
@@ -227,7 +235,7 @@ header .navbar {}
     }
 
     .banner-content {
-        margin-top: 100px;
+        margin-top: 200px;
     }
 
     .banner-content p {
@@ -236,7 +244,7 @@ header .navbar {}
 
 }
 
-@media(max-width:568px) {
+@media(max-width:480px) {
     .banner-circle {
         right: 1%;
         top: 35px;
@@ -247,5 +255,9 @@ header .navbar {}
         border-radius: 50%;
         transition: 0.8s cubic-bezier(0.97, -0.08, 0.31, 1.02);
         ;
+    }
+
+    .banner-circle.show {
+        right: -200%;
     }
 }
