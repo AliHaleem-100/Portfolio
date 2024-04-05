@@ -228,7 +228,7 @@ header .navbar {}
 
     /* banner */
     .banner {
-        height: auto;
+        /* height: auto; */
     }
 
     .banner-content {
