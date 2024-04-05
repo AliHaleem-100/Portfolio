@@ -227,7 +227,7 @@ header .navbar {}
 
 
     /* banner */
-    .banner {
+    HEAD .banner {
         height: auto;
     }
 
@@ -235,6 +235,9 @@ header .navbar {}
         padding-block: 280px 125px;
     }
 
+    .banner-content {
+        margin-top: 278px;
+    }
 
     .banner-content h1 {
         font-size: calc(var(--title-fontSize) - 10px);
@@ -285,6 +288,7 @@ header .navbar {}
         width: 100%;
     }
 
+    HEAD
     /* .banner {
         height: 50vh;
     } */
