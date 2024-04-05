@@ -227,7 +227,7 @@ header .navbar {}
 
 
     /* banner */
-    HEAD .banner {
+    .banner {
         height: auto;
     }
 
@@ -236,7 +236,7 @@ header .navbar {}
     }
 
     .banner-content {
-        margin-top: 278px;
+        margin-top: auto;
     }
 
     .banner-content h1 {
@@ -288,7 +288,6 @@ header .navbar {}
         width: 100%;
     }
 
-    HEAD
     /* .banner {
         height: 50vh;
     } */
