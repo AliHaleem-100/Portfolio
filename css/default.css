@@ -40,3 +40,7 @@ body {
     text-align: center;
     padding: 50px 0;
 }
+
+.section {
+    padding-inline: var(--main-inline-padding);
+}

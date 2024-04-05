@@ -1,3 +1,15 @@
+/* TOOLS START */
+
+.circle {
+    width: 600px;
+    height: 600px;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+
+}
+
+/* TOOLS END */
+
 header {
     position: fixed;
     top: 0;
@@ -18,7 +30,6 @@ header .logo {
     color: var(--secondary-color);
 }
 
-header .navbar {}
 
 .navbar .nav-link {
     margin-inline: 15px;
@@ -130,27 +141,45 @@ header .navbar {}
     color: var(--secondary-color);
 }
 
+
+
 .banner-circle {
     position: absolute;
     right: -430px;
     top: 180px;
-    width: 600px;
-    height: 600px;
-    transform: translate(-50%, -50%);
     background: var(--secondary-color);
-    border-radius: 50%;
 }
 
 /* summary */
 
-.summary {}
+.summary {
+    position: relative;
+    background: var(--secondary-color);
+    overflow: hidden;
+}
 
-.summary-content {}
+.summary-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100vh;
+    padding-block: 50px;
+    font-size: var(--paragraph-fontSize);
 
-.summary-content .summary-circle {}
+}
+
+.summary-content .summary-circle {
+    position: absolute;
+    left: 130px;
+    bottom: -360px !important;
+    background-color: var(--primary-color);
+}
 
 
-.summary-content p {}
+.summary-content p {
+    flex-basis: 50%;
+    margin-left: auto;
+}
 
 
 /* services */
@@ -163,11 +192,24 @@ header .navbar {}
     .banner-circle {
         right: -480px;
         top: 90px;
-        width: 600px;
-        height: 600px;
         transform: translate(-50%, -50%);
         background: var(--secondary-color);
         border-radius: 50%;
+    }
+
+    .summary {
+        background: var(--primary-color);
+        isolation: isolate;
+    }
+
+    .summary-content .summary-circle {
+        position: absolute;
+        left: 50%;
+        top: 80%;
+        width: 1200px;
+        height: 1200px;
+        background-color: var(--secondary-color);
+        z-index: -1;
     }
 }
 
@@ -278,6 +320,8 @@ header .navbar {}
     }
 }
 
+
+
 @media(max-width:568px) {
     .banner-content {
         margin-top: 0px;
@@ -287,10 +331,6 @@ header .navbar {}
     .banner-content p {
         width: 100%;
     }
-
-    /* .banner {
-        height: 50vh;
-    } */
 
     .banner-circle {
         position: fixed;
