@@ -32,3 +32,11 @@ body {
     --main-inline-padding: 30px;
 
 }
+
+.section-title {
+    font-size: var(--title-fontSize);
+    color: var(--primary-color);
+    display: block;
+    text-align: center;
+    padding: 50px 0;
+}
