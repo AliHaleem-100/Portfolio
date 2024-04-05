@@ -255,6 +255,8 @@ header .navbar {}
         transition: 0.8s cubic-bezier(0.97, -0.08, 0.31, 1.02);
     }
 
+
+
     .banner-circle.show {
         right: -147%;
         top: 50%;
