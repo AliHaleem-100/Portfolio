@@ -200,16 +200,22 @@ header .logo {
     .summary {
         background: var(--primary-color);
         isolation: isolate;
+        padding-top: 20px;
     }
 
     .summary-content .summary-circle {
+        --width-and-height: 1200px;
         position: absolute;
         left: 50%;
-        top: 80%;
-        width: 1200px;
-        height: 1200px;
+        top: calc(0% + (var(--width-and-height) / 2));
+        width: var(--width-and-height);
+        height: var(--width-and-height);
         background-color: var(--secondary-color);
         z-index: -1;
+    }
+
+    .summary-content p {
+        flex-basis: 100%;
     }
 }
 
@@ -347,4 +353,5 @@ header .logo {
     .banner-circle.show {
         right: -200%;
     }
+
 }
