@@ -1,3 +1,9 @@
+.circle {
+    width: 600px;
+    height: 600px;
+    border-radius: 50%;
+}
+
 header {
     position: fixed;
     width: 100%;
@@ -45,7 +51,6 @@ header .navbar .nav-link.active:after {
     width: 50px;
     height: 50px;
     border-radius: 50%;
-    background: var(--secondary-color);
     display: none;
     justify-content: center;
     align-items: center;
@@ -63,7 +68,7 @@ header .navbar .nav-link.active:after {
 .bar-icon .lines .line {
     width: 27px;
     height: 2px;
-    background: var(--primary-color);
+    background: var(--secondary-color);
     margin-block: 3px;
     transition: 0.3s;
 }
@@ -73,12 +78,17 @@ header .navbar .nav-link.active:after {
     align-self: flex-end;
 }
 
+.bar-icon.cross {
+    background: var(--primary-color);
+}
+
 .bar-icon.cross .line2 {
     opacity: 0;
     visibility: hidden;
 }
 
 .bar-icon.cross .lines .line {
+    background: var(--secondary-color);
     margin-block: -1px;
 }
 
@@ -94,7 +104,7 @@ header .navbar .nav-link.active:after {
 
 .banner {
     width: 100%;
-    height: 100vh;
+    /* height: 100vh; */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -108,6 +118,7 @@ header .navbar .nav-link.active:after {
     justify-content: center;
     flex-direction: column;
     color: var(--secondary-color);
+    padding-block: 230px;
     gap: 35px;
 }
 
@@ -124,13 +135,67 @@ header .navbar .nav-link.active:after {
     position: absolute;
     right: calc(0% - 200px);
     top: calc(0% - 200px);
-    width: 600px;
-    height: 600px;
     background: var(--secondary-color);
-    border-radius: 50%;
 }
 
-@media (max-width: 992px) {}
+/* summary */
+
+.summary {
+    position: relative;
+    background: var(--secondary-color);
+    overflow: hidden;
+}
+
+.summary .summary-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-block: 100px;
+}
+
+.summary .summary-content .summary-circle {
+    position: absolute;
+    left: calc(0% - 200px);
+    bottom: calc(0% - 200px);
+    background: var(--primary-color);
+}
+
+.summary .summary-content .summary-paragraph {
+    flex-basis: 50%;
+    text-align: justify;
+    margin-left: auto;
+}
+
+.service-section {
+    height: 100vh;
+}
+
+@media (max-width: 992px) {
+    .summary {
+        background: var(--primary-color);
+        isolation: isolate;
+    }
+
+    .summary .section-title {
+        margin-top: 50px;
+    }
+
+    .summary .summary-content .summary-circle {
+        --width-and-height: 1200px;
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: var(--width-and-height);
+        height: var(--width-and-height);
+        background: var(--secondary-color);
+        z-index: -1;
+    }
+
+    .summary .summary-content .summary-paragraph {
+        flex-basis: 100%;
+    }
+}
 
 @media (max-width: 768px) {
     header {
@@ -139,7 +204,7 @@ header .navbar .nav-link.active:after {
 
     header .navbar {
         position: absolute;
-        top: 100%;
+        top: 0%;
         width: 100%;
         left: 0;
         opacity: 0;
@@ -148,7 +213,7 @@ header .navbar .nav-link.active:after {
         justify-content: center;
         align-items: center;
         flex-direction: column;
-        height: calc(100vh - 50%);
+        height: 100vh;
         background: var(--secondary-color);
         transition: 0.3s;
     }
@@ -163,6 +228,7 @@ header .navbar .nav-link.active:after {
         width: 100%;
         text-align: center;
         padding-block: 50px;
+        font-size: calc(var(--title-fontSize) - var(--paragraph-fontSize));
         cursor: pointer;
     }
 
@@ -172,6 +238,8 @@ header .navbar .nav-link.active:after {
 
     .bar-icon {
         display: flex;
+        background: var(--primary-color);
+        z-index: 1;
     }
 
     /* banner */
@@ -211,7 +279,7 @@ header .navbar .nav-link.active:after {
         position: fixed;
         /* the pixel was suit to this sanario but percentage was fit when shrink or expand the screen */
         right: 30px;
-        top: 3.6%;
+        top: 20px;
         width: 50px;
         height: 50px;
         border-radius: 50%;
@@ -228,6 +296,16 @@ header .navbar .nav-link.active:after {
 }
 
 @media (max-width: 568px) {
+    .bar-icon {
+        background: var(--secondary-color);
+    }
+
+    .bar-icon .lines .line {
+        background: var(--primary-color);
+    }
+
+    /* banner */
+
     .banner .banner-content {
         text-align: center;
     }
@@ -238,8 +316,8 @@ header .navbar .nav-link.active:after {
 
     .banner .banner-circle {
         position: fixed;
-        right: 5.5%;
-        top: 2.5%;
+        right: 30px;
+        top: 20px;
         width: 50px;
         height: 50px;
         visibility: hidden;
@@ -254,12 +332,24 @@ header .navbar .nav-link.active:after {
         height: 1200px;
         visibility: visible;
         transform: translate(0%, 0%);
+    }
 
+    /* summary */
+    .summary .summary-content .summary-circle {
+        --width-and-height: 700px;
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: var(--width-and-height);
+        height: 100%;
+        border-radius: 50% 50% 0 0;
+        background: var(--secondary-color);
+        z-index: -1;
     }
 }
 
 @media (max-width: 480px) {
-
     .banner .banner-circle {
         right: 7.5%;
         top: 2.5%;
