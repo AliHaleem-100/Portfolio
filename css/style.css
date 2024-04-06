@@ -5,7 +5,8 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: var(--secondary-color);
+    /* background: var(--secondary-color); */
+    z-index: 1;
 }
 
 header .logo {
@@ -20,7 +21,8 @@ header .navbar {
 
 header .navbar .nav-link {
     margin-inline: 10px;
-    color: var(--paragraph-fontSize);
+    font-size: var(--paragraph-fontSize);
+    color: var(--primary-color);
 }
 
 header .navbar .nav-link.active {
@@ -28,7 +30,7 @@ header .navbar .nav-link.active {
 }
 
 header .navbar .nav-link.active:after {
-    content: '';
+    content: "";
     position: absolute;
     width: 6px;
     height: 6px;
@@ -36,7 +38,7 @@ header .navbar .nav-link.active:after {
     left: 50%;
     transform: translateX(-50%);
     top: 25px;
-    border-radius: 50%
+    border-radius: 50%;
 }
 
 .bar-icon {
@@ -78,7 +80,6 @@ header .navbar .nav-link.active:after {
 
 .bar-icon.cross .lines .line {
     margin-block: -1px;
-
 }
 
 .bar-icon.cross .lines .line1 {
@@ -89,14 +90,51 @@ header .navbar .nav-link.active:after {
     transform: rotate(-45deg);
 }
 
+/* banner */
 
+.banner {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--primary-color);
+    position: relative;
+    overflow-x: hidden;
+}
 
+.banner .banner-content {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    color: var(--secondary-color);
+    gap: 35px;
+}
 
-@media (max-width:992px) {}
+.banner .banner-content h1 {
+    font-size: var(--title-fontSize);
+}
 
-@media (max-width:768px) {
-    .bar-icon {
-        display: flex;
+.banner .banner-content p {
+    max-width: 50%;
+    font-size: var(--paragraph-fontSize);
+}
+
+.banner .banner-circle {
+    position: absolute;
+    right: calc(0% - 200px);
+    top: calc(0% - 200px);
+    width: 600px;
+    height: 600px;
+    background: var(--secondary-color);
+    border-radius: 50%;
+}
+
+@media (max-width: 992px) {}
+
+@media (max-width: 768px) {
+    header {
+        padding-block: 20px;
     }
 
     header .navbar {
@@ -118,6 +156,7 @@ header .navbar .nav-link.active:after {
     header .navbar.show {
         opacity: 1;
         pointer-events: all;
+        transition-delay: 0.06s;
     }
 
     header .navbar .nav-link {
@@ -131,7 +170,98 @@ header .navbar .nav-link.active:after {
         display: none;
     }
 
+    .bar-icon {
+        display: flex;
+    }
 
+    /* banner */
+
+    .banner {
+        width: 100%;
+        height: auto;
+        background: var(--primary-color);
+    }
+
+    .banner .banner-content {
+        width: 100%;
+        min-height: 500px;
+        gap: 50px;
+    }
+
+    .banner .banner-content h1 {
+        font-size: calc(var(--title-fontSize) - 10px);
+    }
+
+    .banner .banner-content p {
+        max-width: 60%;
+    }
+
+    .banner .banner-circle {
+        position: absolute;
+        right: calc(0% - 200px);
+        top: calc(0% - 200px);
+        width: 500px;
+        height: 500px;
+        background: var(--secondary-color);
+        border-radius: 50%;
+        transition: 0.5s;
+    }
+
+    .banner .banner-circle.scroll {
+        position: fixed;
+        /* the pixel was suit to this sanario but percentage was fit when shrink or expand the screen */
+        right: 30px;
+        top: 3.6%;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+    }
+
+    .banner .banner-circle.show {
+        right: -41%;
+        top: -50%;
+        width: 1200px;
+        height: 1200px;
+        visibility: visible;
+        transform: translate(0%, 0%);
+    }
 }
 
-@media (max-width:568px) {}
+@media (max-width: 568px) {
+    .banner .banner-content {
+        text-align: center;
+    }
+
+    .banner .banner-content p {
+        max-width: 100%;
+    }
+
+    .banner .banner-circle {
+        position: fixed;
+        right: 5.5%;
+        top: 2.5%;
+        width: 50px;
+        height: 50px;
+        visibility: hidden;
+        background: var(--secondary-color);
+        border-radius: 50%;
+    }
+
+    .banner .banner-circle.show {
+        right: -50%;
+        top: -50%;
+        width: 1200px;
+        height: 1200px;
+        visibility: visible;
+        transform: translate(0%, 0%);
+
+    }
+}
+
+@media (max-width: 480px) {
+
+    .banner .banner-circle {
+        right: 7.5%;
+        top: 2.5%;
+    }
+}
