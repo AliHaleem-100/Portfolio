@@ -21,12 +21,10 @@ body {
     --primary-color: #1B1E2A;
     --secondary-color: #E1E5EE;
 
-
     /* FONTS - (FONT_WEIGHT, FONT_SIZE, ETC...)*/
     --logo-fontSize: 20px;
     --title-fontSize: 40px;
     --paragraph-fontSize: 14px;
-
 
     /* OTHERS */
     --main-inline-padding: 30px;

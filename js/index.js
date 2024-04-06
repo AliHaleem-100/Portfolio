@@ -10,7 +10,8 @@ barIcon.addEventListener("click", () => {
 });
 
 window.addEventListener("scroll", () => {
-  if (document.documentElement.scrollTop > 306)
+  if (document.documentElement.scrollTop > 106) {
     banner_circle.classList.add("scroll");
-  else banner_circle.classList.remove("scroll");
+  } else banner_circle.classList.remove("scroll");
+  // console.log(document.documentElement.scrollTop);
 });
