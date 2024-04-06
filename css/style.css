@@ -166,9 +166,71 @@ header .navbar .nav-link.active:after {
     margin-left: auto;
 }
 
+/* services */
 .service-section {
-    height: 100vh;
+    background: var(--service-sec-background);
 }
+
+.service-section .section-title {}
+
+.service-section .cards {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 100px;
+    padding-block: 50px;
+
+}
+
+.service-section .cards .card {
+    width: 250px;
+    height: 300px;
+    border-radius: 10px;
+    font-size: var(--title-fontSize);
+    background-color: var(--card-overlay);
+    color: var(--secondary-color);
+    font-weight: 600;
+    background-position: center;
+    background-size: cover;
+    display: grid;
+    place-items: center;
+}
+
+.cards .card.uiux-card {
+    background-image: url("../IMAGES/uiux.jpeg");
+}
+
+.cards .card.design-card {
+    background-image: url("../IMAGES/R.jpeg");
+}
+
+.cards .card.coding-card {
+    background-color: rgba(17, 40, 125, 0.4);
+    background-blend-mode: darken;
+    background-image: url("../IMAGES/coding.jpg");
+}
+
+/* footer */
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-block: 20px ;
+    background: var(--primary-color);
+    color: var(--secondary-color);
+}
+
+footer span {
+    flex: content;
+}
+
+footer p {
+    flex: 90%;
+    text-align: center;
+}
+
 
 @media (max-width: 992px) {
     .summary {
@@ -194,6 +256,15 @@ header .navbar .nav-link.active:after {
 
     .summary .summary-content .summary-paragraph {
         flex-basis: 100%;
+    }
+
+    /* service */
+    .service-section .cards {
+        gap: 30px;
+    }
+
+    .cards .card.coding-card {
+        width: 530px
     }
 }
 
@@ -295,6 +366,17 @@ header .navbar .nav-link.active:after {
     }
 }
 
+@media (max-width: 591px) {
+    .service-section .cards .card {
+        width: 230px;
+    }
+
+    .service-section .cards .card.coding-card {
+        width: 490px;
+    }
+
+}
+
 @media (max-width: 568px) {
     .bar-icon {
         background: var(--secondary-color);
@@ -346,6 +428,11 @@ header .navbar .nav-link.active:after {
         border-radius: 50% 50% 0 0;
         background: var(--secondary-color);
         z-index: -1;
+    }
+
+    /* service */
+    .service-section .cards .card {
+        width: 100%;
     }
 }
 

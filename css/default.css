@@ -20,7 +20,8 @@ body {
 :root {
     --primary-color: #1B1E2A;
     --secondary-color: #E1E5EE;
-
+    --service-sec-background: #E6E9F0;
+    --card-overlay: rgba(28, 31, 44, 0.3);
     /* FONTS - (FONT_WEIGHT, FONT_SIZE, ETC...)*/
     --logo-fontSize: 20px;
     --title-fontSize: 40px;
