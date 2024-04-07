@@ -4,109 +4,7 @@
     border-radius: 50%;
 }
 
-header {
-    position: fixed;
-    width: 100%;
-    max-width: 1400px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    z-index: 1;
-    transition: 0.5s;
-}
 
-header.fillBackground {
-    background-color: var(--secondary-color);
-}
-
-header .logo {
-    font-weight: 600;
-    font-size: var(--logo-fontSize);
-    color: var(--secondary-color);
-}
-
-header.fillBackground .logo {
-    color: var(--primary-color);
-}
-
-header .navbar {}
-
-header .navbar .nav-link {
-    display: inline-block;
-    padding-block: 20px;
-    margin-inline: 10px;
-    font-size: var(--paragraph-fontSize);
-    color: var(--primary-color);
-}
-
-header .navbar .nav-link.active {
-    position: relative;
-}
-
-header .navbar .nav-link.active:after {
-    content: "";
-    position: absolute;
-    width: 6px;
-    height: 6px;
-    background: var(--primary-color);
-    left: 50%;
-    transform: translateX(-50%);
-    top: calc(100% - 12px);
-    border-radius: 50%;
-}
-
-.bar-icon {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    display: none;
-    justify-content: center;
-    align-items: center;
-}
-
-.bar-icon .lines {
-    width: fit-content;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
-
-.bar-icon .lines .line {
-    width: 27px;
-    height: 2px;
-    background: var(--secondary-color);
-    margin-block: 3px;
-    transition: 0.3s;
-}
-
-.bar-icon .lines .line2 {
-    width: 15px;
-    align-self: flex-end;
-}
-
-.bar-icon.cross {
-    background: var(--primary-color);
-}
-
-.bar-icon.cross .line2 {
-    opacity: 0;
-    visibility: hidden;
-}
-
-.bar-icon.cross .lines .line {
-    background: var(--secondary-color);
-    margin-block: -1px;
-}
-
-.bar-icon.cross .lines .line1 {
-    transform: rotate(45deg);
-}
-
-.bar-icon.cross .lines .line3 {
-    transform: rotate(-45deg);
-}
 
 /* banner */
 
@@ -222,22 +120,6 @@ header .navbar .nav-link.active:after {
     background-image: url("../IMAGES/coding.jpg");
 }
 
-/* footer */
-footer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding-block: 20px;
-    background: var(--primary-color);
-    color: var(--secondary-color);
-    font-size: var(--paragraph-fontSize);
-}
-
-footer p {
-    flex: 90%;
-    text-align: center;
-}
-
 
 @media (max-width: 992px) {
     .summary {
@@ -276,60 +158,8 @@ footer p {
 }
 
 @media (max-width: 768px) {
-    header {
-        padding-block: 20px;
-    }
-
-    header.fillBackground {
-        background-color: var(--primary-color);
-    }
-
-    header.fillBackground .logo {
-        color: var(--secondary-color);
-    }
-
-    header .navbar {
-        position: absolute;
-        top: 0%;
-        width: 100%;
-        left: 0;
-        opacity: 0;
-        pointer-events: none;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        height: 100vh;
-        background: var(--secondary-color);
-        transition: 0.3s;
-    }
-
-    header .navbar.show {
-        opacity: 1;
-        pointer-events: all;
-        transition-delay: 0.06s;
-    }
-
-    header .navbar .nav-link {
-        width: 100%;
-        text-align: center;
-        padding-block: 50px;
-        font-size: calc(var(--title-fontSize) - var(--paragraph-fontSize));
-        cursor: pointer;
-    }
-
-    header .navbar .nav-link.active:after {
-        display: none;
-    }
-
-    .bar-icon {
-        display: flex;
-        background: var(--primary-color);
-        z-index: 1;
-    }
-
+    
     /* banner */
-
     .banner {
         width: 100%;
         height: auto;
@@ -363,7 +193,6 @@ footer p {
 
     .banner .banner-circle.scroll {
         position: fixed;
-        /* the pixel was suit to this sanario but percentage was fit when shrink or expand the screen */
         right: 30px;
         top: 20px;
         width: 50px;

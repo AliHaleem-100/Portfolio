@@ -1,0 +1,168 @@
+:root {
+    --border-radius: 5px;
+}
+
+header .navbar .nav-link {
+    color: var(--secondary-color);
+}
+
+header .navbar .nav-link.active:after {
+    background: var(--secondary-color);
+}
+
+/* banner */
+.banner {
+    width: 100%;
+    padding-block: 150px;
+    background: var(--primary-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--secondary-color);
+    font-size: var(--title-fontSize);
+    font-weight: 600;
+}
+
+/* contact section */
+.contact-section {
+    position: relative;
+    width: 100%;
+    background: var(--primary-color);
+    isolation: isolate;
+    overflow-x: hidden;
+}
+
+.section-title {
+    padding-block: 100px;
+}
+
+.contact-circle {
+    position: absolute;
+    left: 50%;
+    width: 2000px;
+    height: 100%;
+    border-radius: 50% 50% 0 0;
+    transform: translateX(-50%);
+    background: var(--secondary-color);
+    z-index: -1;
+}
+
+form {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+form .input {
+    margin-block: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+form .input label {
+    font-size: var(--paragraph-fontSize);
+    text-indent: 5px;
+}
+
+form .input input,
+form .input textarea {
+    height: 60px;
+    padding-inline: 10px;
+    background: var(--primary-color);
+    border-radius: var(--border-radius);
+}
+
+form .input input::placeholder,
+form .input textarea::placeholder {
+    color: var(--secondary-color);
+}
+
+form .input textarea::placeholder {
+    padding-top: 20px;
+}
+
+form .input textarea {
+    height: 400px;
+    resize: none;
+}
+
+
+form .send-btn {
+    display: block;
+    width: 150px;
+    height: 50px;
+    background: var(--primary-color);
+    color: var(--secondary-color);
+    margin-left: auto;
+    font-size: 20px;
+    border-radius: var(--border-radius);
+    text-transform: uppercase;
+}
+
+.other-way {
+    margin-block: 100px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+
+.other-way .other-way-title {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.other-way .other-way-title .title-line {
+    width: 50px;
+    height: 6px;
+    background: var(--primary-color);
+}
+
+.other-way .other-way-title .title-text {
+    font-size: var(--title-fontSize);
+    font-weight: 600;
+}
+
+.icons {
+    margin-block: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 50px;
+}
+
+.icons img {
+    width: 50px;
+    height: 50px;
+}
+
+@media (max-width: 992px) {}
+
+@media (max-width: 768px) {
+    header .navbar .nav-link {
+        color: var(--primary-color);
+    }
+
+}
+
+@media (max-width: 591px) {
+    :root {
+        --title-fontSize: 30px;
+    }
+
+    .contact-circle {
+        width: 1000px;
+    }
+
+    .other-way .other-way-title .title-line {
+        width: 35px;
+        height: 4px;
+    }
+
+}
+
+@media (max-width: 568px) {}
+
+@media (max-width: 480px) {}
