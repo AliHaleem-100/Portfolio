@@ -54,7 +54,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-block: 100px;
+  padding-bottom: 100px;
 }
 
 .summary .summary-content .summary-circle {
@@ -77,8 +77,6 @@
   background: var(--light-secondary-color);
 }
 
-.service-section .section-title {}
-
 .service-section .cards {
   width: 100%;
   display: flex;
@@ -86,7 +84,7 @@
   align-items: center;
   flex-wrap: wrap;
   gap: 100px;
-  padding-block: 50px;
+  padding-bottom: 50px;
 }
 
 .service-section .cards .card {
@@ -154,7 +152,6 @@
 }
 
 @media (max-width: 768px) {
-
   /* banner */
   .banner {
     width: 100%;
@@ -175,7 +172,6 @@
   .banner .banner-content p {
     max-width: 60%;
   }
-
 }
 
 @media (max-width: 591px) {
@@ -210,7 +206,7 @@
   .banner .banner-circle {
     position: fixed;
     right: 30px;
-    top: 20px;
+    top: 10px;
     width: 50px;
     height: 50px;
     visibility: hidden;

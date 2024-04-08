@@ -159,14 +159,9 @@ header .navbar .nav-link.active::after {
     transform: rotate(-45deg);
 }
 
-
-
 /* footer */
 
 footer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
     padding-block: 20px;
     background: var(--primary-color);
     color: var(--secondary-color);
@@ -174,16 +169,12 @@ footer {
 }
 
 footer p {
-    flex: 90%;
     text-align: center;
 }
 
-
-
-
 @media (max-width: 768px) {
     header {
-        padding-block: 5px;
+        padding-block: 10px;
     }
 
     header.fillBackground {
@@ -248,7 +239,7 @@ footer p {
     .banner .banner-circle.scroll {
         position: fixed;
         right: 30px;
-        top: 5px;
+        top: 10px;
         width: 50px;
         height: 50px;
         border-radius: 50%;
@@ -265,6 +256,7 @@ footer p {
 }
 
 @media (max-width: 568px) {
+    
     .bar-icon {
         background: var(--secondary-color);
     }
