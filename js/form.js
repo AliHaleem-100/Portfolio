@@ -1,8 +1,3 @@
-let form = document.querySelector("form");
-let name_input = document.getElementById("name");
-let email_input = document.getElementById("email");
-let message_input = document.getElementById("message");
-
 function sendMail() {
   Email.send({
     Host: "smtp.elasticemail.com",

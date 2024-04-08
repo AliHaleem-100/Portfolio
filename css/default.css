@@ -21,10 +21,10 @@ body {
     /* COLORS */
     --primary-color: #1B1E2A;
     --secondary-color: #E1E5EE;
+    --header-background: #e1e5eef2;
     --light-secondary-color: #E6E9F0;
     --card-overlay: rgba(28, 31, 44, 0.3);
-    
-    /* FONTS - (FONT_WEIGHT, FONT_SIZE, ETC...)*/
+    /* FONTS */
     --logo-fontSize: 20px;
     --title-fontSize: 40px;
     --paragraph-fontSize: 14px;
@@ -56,8 +56,12 @@ header {
     transition: 0.5s;
 }
 
-header.fillBackground {
-    background-color: var(--secondary-color);
+header.fill-background {
+    background-color: var(--header-background);
+}
+
+header.fill-background .logo {
+    color: var(--primary-color);
 }
 
 header .logo {
@@ -70,8 +74,6 @@ header.fillBackground .logo {
     color: var(--primary-color);
 }
 
-header .navbar {}
-
 header .navbar .nav-link {
     display: inline-block;
     padding-block: 20px;
@@ -80,11 +82,19 @@ header .navbar .nav-link {
     color: var(--primary-color);
 }
 
+header.fill-background .nav-link {
+    color: var(--primary-color) !important;
+}
+
 header .navbar .nav-link.active {
     position: relative;
 }
 
-header .navbar .nav-link.active:after {
+header.fill-background .navbar .nav-link.active::after {
+    background: var(--primary-color) !important;
+}
+
+header .navbar .nav-link.active::after {
     content: "";
     position: absolute;
     width: 6px;
@@ -173,7 +183,7 @@ footer p {
 
 @media (max-width: 768px) {
     header {
-        padding-block: 20px;
+        padding-block: 5px;
     }
 
     header.fillBackground {
@@ -222,6 +232,35 @@ footer p {
         display: flex;
         background: var(--primary-color);
         z-index: 1;
+    }
+
+    .banner .banner-circle {
+        position: absolute;
+        right: calc(0% - 200px);
+        top: calc(0% - 200px);
+        width: 500px;
+        height: 500px;
+        background: var(--secondary-color);
+        border-radius: 50%;
+        transition: 0.5s;
+    }
+
+    .banner .banner-circle.scroll {
+        position: fixed;
+        right: 30px;
+        top: 5px;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+    }
+
+    .banner .banner-circle.show {
+        right: -41%;
+        top: -50%;
+        width: 1200px;
+        height: 1200px;
+        visibility: visible;
+        transform: translate(0%, 0%);
     }
 }
 

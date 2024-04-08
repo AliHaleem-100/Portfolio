@@ -1,6 +1,4 @@
 import { data } from "./data.js";
-const skills_categories = document.querySelector(".skills-categories");
-
 async function AddingSKills(skills) {
   let skillsHTML = [];
   skills.forEach((skill) => {
