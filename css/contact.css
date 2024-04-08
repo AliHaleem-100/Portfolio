@@ -146,8 +146,8 @@ form .send-btn {
 }
 
 @media (max-width: 591px) {
-  :root {
-    --title-fontSize: 30px;
+  .section-title {
+    font-size: 30px;
   }
 
   .contact-circle {
