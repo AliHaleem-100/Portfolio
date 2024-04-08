@@ -68,6 +68,7 @@ form .input input,
 form .input textarea {
     height: 60px;
     padding-inline: 10px;
+    color: var(--secondary-color);
     background: var(--primary-color);
     border-radius: var(--border-radius);
 }
@@ -77,7 +78,7 @@ form .input textarea::placeholder {
     color: var(--secondary-color);
 }
 
-form .input textarea::placeholder {
+form .input textarea {
     padding-top: 20px;
 }
 

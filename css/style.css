@@ -76,7 +76,7 @@
 
 /* services */
 .service-section {
-    background: var(--service-sec-background);
+    background: var(--light-secondary-color);
 }
 
 .service-section .section-title {}
@@ -120,7 +120,6 @@
     background-image: url("../IMAGES/coding.jpg");
 }
 
-
 @media (max-width: 992px) {
     .summary {
         background: var(--primary-color);
@@ -158,7 +157,7 @@
 }
 
 @media (max-width: 768px) {
-    
+
     /* banner */
     .banner {
         width: 100%;

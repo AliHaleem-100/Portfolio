@@ -16,9 +16,9 @@
     <header class="section">
         <a class="logo" href="index.html">ALI HALEEM</a>
         <nav class="navbar">
-            <a href="index.html" class="nav-link active">HOME</a>
+            <a href="index.html" class="nav-link">HOME</a>
             <a href="about.html" class="nav-link">ABOUT</a>
-            <a href="contact.html" class="nav-link">CONTACT</a>
+            <a href="contact.html" class="nav-link active">CONTACT</a>
         </nav>
         <!-- the background is bar-icon -->
         <div class="bar-icon">
@@ -38,28 +38,31 @@
         <section class="contact-section section">
             <div class="contact-circle"></div>
             <h1 class="section-title">CONTACT</h1>
-            <form>
+            <form onsubmit="sendMail(); reset(); return false">
+
                 <div class="input name-input" class="input input-name">
                     <label for="name">NAME
                         <span class="require-sign">*</span>
                     </label>
-                    <input type="text" id="name" placeholder="e.g JOHN" required>
+                    <input type="text" id="name" placeholder="e.g JOHN">
                 </div>
+
                 <div class="input email-input">
                     <label for="name">EMAIL
                         <span class="require-sign">*</span>
                     </label>
-                    <input type="text" id="name" placeholder="e.g example@gmail.com" required>
+                    <input type="text" id="email" placeholder="e.g example@gmail.com">
                 </div>
+
                 <div class="input message-input">
                     <label for="name">MESSAGE
                         <span class="require-sign">*</span>
                     </label>
-                    <textarea type="text" id="name" placeholder="e.g i want to create a website, etc..."
-                        required></textarea>
+                    <textarea type="text" id="message" placeholder="e.g i want to create a website, etc..."></textarea>
                 </div>
                 <input type="submit" class="send-btn" value="Send">
             </form>
+
             <div class="other-way">
                 <div class="other-way-title">
                     <span class="title-line"></span>
@@ -67,9 +70,11 @@
                     <span class="title-line"></span>
                 </div>
                 <div class="icons">
-                    <img src="IMAGES/linkedin.svg" alt="Linked IN">
-                    <img src="IMAGES/github.svg" alt="Github">
-                    <img src="IMAGES/square_Gmail.svg" alt="">
+                    <a href="https://www.linkedin.com/in/ali-haleem-885814251"><img src="IMAGES/linkedin.svg"
+                            alt="Linked IN"></a>
+                    <a href="https://github.com/AliHaleem-100"><img src="IMAGES/github.svg" alt="Github"></a>
+                    <a href="https://www.facebook.com/ali.haleem.5876?mibextid=ibOpuv"><img src="IMAGES/facebook.svg"
+                            alt=""></a>
                 </div>
             </div>
         </section>
@@ -77,6 +82,8 @@
     <footer class="section">
         <p>© 2024 Ali Haleem. All rights reserved.</p>
     </footer>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script src="js/form.js"></script>
     <script src="js/index.js"></script>
 </body>
 
