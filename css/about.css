@@ -139,8 +139,17 @@ header .navbar .nav-link.active:after {
 }
 
 @media (max-width: 768px) {
+
     .skills-categories {
         width: 100%;
+    }
+
+    .skill-category .skills {
+        gap: 0;
+    }
+
+    .skill-category .skills .skill {
+        margin-block: 10px;
     }
 
     .skills .skill .skill-bar {
@@ -149,18 +158,15 @@ header .navbar .nav-link.active:after {
 }
 
 @media (max-width: 568px) {
-    .skills .skill {
-        margin-block: 20px;
+    .about-paragraph {
+        width: 100%;
     }
+
+    .skills .skill {}
 
     .skills .skill .input-and-percentage {
-        flex-direction: column;
-        gap: 5px;
-    }
-
-    .skills .skill .skill-percentage {
-        order: -1;
-        align-self: flex-end;
+        /* flex-direction: column; */
+        gap: 10px;
     }
 }
 
