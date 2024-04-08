@@ -140,6 +140,11 @@ header .navbar .nav-link.active:after {
 
 @media (max-width: 768px) {
 
+    header .navbar .nav-link {
+        color: var(--primary-color);
+    }
+    
+
     .skills-categories {
         width: 100%;
     }
