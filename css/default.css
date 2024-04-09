@@ -23,7 +23,7 @@ body {
     --secondary-color: #E1E5EE;
     --header-background: #e1e5eef2;
     --light-secondary-color: #E6E9F0;
-    --light-primary-color : #1B1E2A;
+    --light-primary-color: #1B1E2A;
     --card-overlay: rgba(28, 31, 44, 0.851);
     /* FONTS */
     --logo-fontSize: 20px;
@@ -257,12 +257,23 @@ footer p {
 }
 
 @media (max-width: 568px) {
-    
+
     .bar-icon {
         background: var(--secondary-color);
     }
 
     .bar-icon .lines .line {
         background: var(--primary-color);
+    }
+
+    .banner .banner-circle {
+        position: fixed;
+        right: 30px;
+        top: 10px;
+        width: 50px;
+        height: 50px;
+        visibility: hidden;
+        background: var(--secondary-color);
+        border-radius: 50%;
     }
 }
