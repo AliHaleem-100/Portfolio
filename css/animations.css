@@ -10,7 +10,6 @@
     transform: translate(0%, 0%);
 }
 
-
 .anotherElHide {
     opacity: var(--opacity);
     transform: translate(var(--translate-x, 0%), var(--translate-y, 0%));
@@ -21,4 +20,33 @@
 .anotherElHide.show {
     opacity: 1;
     transform: translate(0%, 0%);
+}
+
+/* skills */
+
+.progressAnimation {
+    opacity: 0;
+    transition: 1s;
+}
+
+.progressAnimation.show {
+    opacity: 1;
+}
+
+.progressAnimation .category-title {
+    text-indent: -100px;
+    transition: 1s;
+}
+
+.progressAnimation.show .category-title {
+    text-indent: 0px;
+}
+
+.progressAnimation .skills .skill .skill-bar::after {
+    width: 0;
+    transition: 1s;
+}
+
+.progressAnimation.show .skills .skill .skill-bar::after {
+    width: var(--bar-width);
 }
