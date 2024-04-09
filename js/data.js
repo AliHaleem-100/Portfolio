@@ -7,6 +7,11 @@ export const data = {
         service_content: `Lorem, ipsum dolor sit amet consectetur adipisicing elit. Culpa doloribus
     cum id, esse assumenda libero rerum cupiditate. Harum voluptas aliquid ullam praesentium
     corrupti! Labore asperiores at optio distinctio, quasi quaerat.`,
+        animationValues: {
+          translate_X: -20,
+          translate_Y: 0,
+          opacity: 0,
+        },
       },
       {
         service_name: "DESIGN",
@@ -14,6 +19,11 @@ export const data = {
         service_content: `Lorem, ipsum dolor sit amet consectetur adipisicing elit. Culpa doloribus
     cum id, esse assumenda libero rerum cupiditate. Harum voluptas aliquid ullam praesentium
     corrupti! Labore asperiores at optio distinctio, quasi quaerat.`,
+        animationValues: {
+          translate_X: 0,
+          translate_Y: 0,
+          opacity: 0,
+        },
       },
       {
         service_name: "CODING",
@@ -21,6 +31,11 @@ export const data = {
         service_content: `Lorem, ipsum dolor sit amet consectetur adipisicing elit. Culpa doloribus
     cum id, esse assumenda libero rerum cupiditate. Harum voluptas aliquid ullam praesentium
     corrupti! Labore asperiores at optio distinctio, quasi quaerat.`,
+        animationValues: {
+          translate_X: 20,
+          translate_Y: 0,
+          opacity: 0,
+        },
       },
     ],
   },

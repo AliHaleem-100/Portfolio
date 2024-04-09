@@ -1,0 +1,24 @@
+.hidedElement {
+    opacity: var(--opacity);
+    transform: translate(var(--translate-x, 0%), var(--translate-y, 0%));
+    transition: 1s;
+    transition-delay: var(--delay, 0s);
+}
+
+.show {
+    opacity: 1;
+    transform: translate(0%, 0%);
+}
+
+
+.anotherElHide {
+    opacity: var(--opacity);
+    transform: translate(var(--translate-x, 0%), var(--translate-y, 0%));
+    transition: 1s;
+    transition-delay: var(--delay, 0s);
+}
+
+.anotherElHide.show {
+    opacity: 1;
+    transform: translate(0%, 0%);
+}

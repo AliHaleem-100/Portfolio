@@ -10,3 +10,4 @@ let message_input = document.getElementById("message");
 let skills_categories = document.querySelector(".skills-categories");
 let card_container = document.querySelector(".cards");
 
+let hiddenElements = document.querySelectorAll(".hidedElement");

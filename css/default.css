@@ -160,6 +160,10 @@ header .navbar .nav-link.active::after {
     transform: rotate(-45deg);
 }
 
+main {
+    overflow-x: hidden;
+}
+
 /* footer */
 
 footer {

@@ -1,3 +1,10 @@
+import { showHiddenElement } from "./tools.js";
+let hiddenEl = new showHiddenElement(hiddenElements);
+
+window.addEventListener("load", () => {
+  hiddenEl.showHidden();
+});
+
 barIcon.addEventListener("click", () => {
   barIcon.classList.toggle("cross");
   navbar.classList.toggle("show");
@@ -9,10 +16,12 @@ barIcon.addEventListener("click", () => {
 
 window.addEventListener("scroll", () => {
   let scrollTop = document.documentElement.scrollTop;
-  scrollTop > 10
-    ? header.classList.add("fill-background")
-    : header.classList.remove("fill-background");
-
+  if (scrollTop > 10) {
+    hiddenEl.showHidden();
+    header.classList.add("fill-background");
+  } else {
+    header.classList.remove("fill-background");
+  }
   if (banner_circle) {
     // if user scroll down
 
