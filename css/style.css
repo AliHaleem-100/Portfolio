@@ -99,7 +99,10 @@
   background-size: cover;
   display: grid;
   place-items: center;
+  position: relative;
+  overflow: hidden;
 }
+
 
 .cards .card.uiux-card {
   background-image: url("../IMAGES/uiux.jpeg");
@@ -114,6 +117,56 @@
   background-blend-mode: darken;
   background-image: url("../IMAGES/coding.jpg");
 }
+
+.card-overlay {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 400px;
+  height: 400px;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background: var(--card-overlay);
+  border-radius: 50%;
+  opacity: 0;
+  transition: 0.7s;
+  /* transition-delay: 0s, 0.10s; */
+  text-align: center;
+}
+
+.service-section .cards .card:hover .card-overlay {
+  visibility: visible;
+  opacity: 1;
+  top: -20%;
+}
+
+.card-content {
+  opacity: 0;
+  width: 60%;
+  line-height: 0.3;
+  transform: translateY(100%);
+
+}
+
+.service-section .cards .card:hover .card-content {
+  opacity: 1;
+  transform: translateY(0%);
+}
+
+.card-content .card-overlay-title {
+  margin-bottom: 20px;
+  font-size: 30px;
+}
+
+.card-content .text {
+  font-size: var(--paragraph-fontSize);
+  font-weight: normal;
+  color: var(--secondary-color);
+}
+
 
 @media (max-width: 992px) {
   .summary {
@@ -149,9 +202,20 @@
   .cards .card.coding-card {
     width: 530px;
   }
+
+  .cards .card.coding-card .card-overlay {
+    width: 800px;
+    height: 150%;
+  }
+
+  .service-section .cards .card:hover .card-content {
+    opacity: 1;
+    transform: translateY(0%);
+  }
 }
 
 @media (max-width: 768px) {
+
   /* banner */
   .banner {
     width: 100%;
@@ -211,7 +275,7 @@
     height: 50px;
     visibility: hidden;
     background: var(--secondary-color);
-    border-radius: 50%;
+    border-radius: 50% 50% 0 0;
   }
 
   .banner .banner-circle.show {
@@ -240,6 +304,12 @@
   /* service */
   .service-section .cards .card {
     width: 100%;
+  }
+
+  .cards .card .card-overlay {
+    /* background: red; */
+    width: 150% !important;
+    height: 150% !important;
   }
 }
 

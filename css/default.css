@@ -23,7 +23,8 @@ body {
     --secondary-color: #E1E5EE;
     --header-background: #e1e5eef2;
     --light-secondary-color: #E6E9F0;
-    --card-overlay: rgba(28, 31, 44, 0.3);
+    --light-primary-color : #1B1E2A;
+    --card-overlay: rgba(28, 31, 44, 0.851);
     /* FONTS */
     --logo-fontSize: 20px;
     --title-fontSize: 40px;

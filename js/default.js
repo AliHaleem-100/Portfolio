@@ -13,9 +13,7 @@ window.addEventListener("scroll", () => {
     ? header.classList.add("fill-background")
     : header.classList.remove("fill-background");
 
-    
   if (banner_circle) {
-    console.log(scrollTop);
     // if user scroll down
 
     scrollTop > 106

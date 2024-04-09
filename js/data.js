@@ -1,4 +1,29 @@
 export const data = {
+  services_section: {
+    services: [
+      {
+        service_name: "UI/UX",
+        service_class: "uiux-card",
+        service_content: `Lorem, ipsum dolor sit amet consectetur adipisicing elit. Culpa doloribus
+    cum id, esse assumenda libero rerum cupiditate. Harum voluptas aliquid ullam praesentium
+    corrupti! Labore asperiores at optio distinctio, quasi quaerat.`,
+      },
+      {
+        service_name: "DESIGN",
+        service_class: "design-card",
+        service_content: `Lorem, ipsum dolor sit amet consectetur adipisicing elit. Culpa doloribus
+    cum id, esse assumenda libero rerum cupiditate. Harum voluptas aliquid ullam praesentium
+    corrupti! Labore asperiores at optio distinctio, quasi quaerat.`,
+      },
+      {
+        service_name: "CODING",
+        service_class: "coding-card",
+        service_content: `Lorem, ipsum dolor sit amet consectetur adipisicing elit. Culpa doloribus
+    cum id, esse assumenda libero rerum cupiditate. Harum voluptas aliquid ullam praesentium
+    corrupti! Labore asperiores at optio distinctio, quasi quaerat.`,
+      },
+    ],
+  },
   skills_section: {
     skill_categories: [
       {
