@@ -2,11 +2,9 @@ export const data = {
   services_section: {
     services: [
       {
-        service_name: "UI/UX",
+        service_name: "UI",
         service_class: "uiux-card",
-        service_content: `Lorem, ipsum dolor sit amet consectetur adipisicing elit. Culpa doloribus
-    cum id, esse assumenda libero rerum cupiditate. Harum voluptas aliquid ullam praesentium
-    corrupti! Labore asperiores at optio distinctio, quasi quaerat.`,
+        service_content: `From a customer-centric perspective, a website's user interface (UI) serves as the primary foundation for its visual appeal and intuitive interaction. This emphasizes the importance of prioritizing user experience through clear design principles that create a positive and engaging first impression.`,
         animationValues: {
           translate_X: -20,
           translate_Y: 0,
@@ -16,9 +14,7 @@ export const data = {
       {
         service_name: "DESIGN",
         service_class: "design-card",
-        service_content: `Lorem, ipsum dolor sit amet consectetur adipisicing elit. Culpa doloribus
-    cum id, esse assumenda libero rerum cupiditate. Harum voluptas aliquid ullam praesentium
-    corrupti! Labore asperiores at optio distinctio, quasi quaerat.`,
+        service_content: `The graphic design is the art and practice of visual communication, using elements like typography, imagery, and layout to transmit ideas and messages to a target audience. It encompasses a wide range of disciplines, from branding and marketing materials to user interfaces (UI) and publications. `,
         animationValues: {
           translate_X: 0,
           translate_Y: 0,
@@ -28,9 +24,7 @@ export const data = {
       {
         service_name: "CODING",
         service_class: "coding-card",
-        service_content: `Lorem, ipsum dolor sit amet consectetur adipisicing elit. Culpa doloribus
-    cum id, esse assumenda libero rerum cupiditate. Harum voluptas aliquid ullam praesentium
-    corrupti! Labore asperiores at optio distinctio, quasi quaerat.`,
+        service_content: `The computer programming, also known as coding, is the process of creating instructions for computers to execute. These instructions, written in specific languages, define functionalities, manipulate data, and control the behavior of software applications and systems.`,
         animationValues: {
           translate_X: 20,
           translate_Y: 0,
