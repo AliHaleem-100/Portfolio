@@ -45,7 +45,7 @@ header .navbar .nav-link.active::after {
 }
 
 form {
-  max-width: 800px;
+  max-width: 700px;
   margin: 0 auto;
 }
 
@@ -96,6 +96,64 @@ form .send-btn {
   text-transform: uppercase;
 }
 
+/* receive message container  */
+.receive-message-container {
+  position: fixed;
+  left: 0%;
+  top: 50%;
+  width: 250px;
+  border-radius: 15px;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  padding: 10px 20px;
+  background: var(--primary-color);
+  color: var(--secondary-color);
+  opacity: 0;
+  z-index: 11;
+  transition: 0.5s;
+}
+
+.receive-message-container .submit-header {
+  font-size: 15px;
+  text-transform: uppercase;
+}
+
+.receive-message-container .submit-body {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  font-size: 25px;
+}
+
+.receive-message-container .submit-body .submit-text {
+  font-size: 10px;
+  flex: 100%;
+}
+
+.receive-message-container img {
+  width: 20px;
+  height: 20px;
+  flex: content;
+}
+
+.receive-overlay {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: var(--card-overlay);
+  z-index: 10;
+}
+
+.receive-message-container.show {
+  left: 10%;
+  opacity: 1;
+}
+
+/* other way */
 .other-way {
   margin-block: 100px;
   width: 100%;
@@ -151,6 +209,14 @@ form .send-btn {
     background: var(--secondary-color);
     border-radius: 50%;
   }
+
+  .receive-message-container.show {
+    left: 50%;
+    background: var(--secondary-color);
+    opacity: 1;
+    color: var(--primary-color);
+  }
+
 }
 
 @media (max-width: 591px) {
@@ -161,6 +227,7 @@ form .send-btn {
   .contact-circle {
     width: 1000px;
   }
+
 
   .other-way .other-way-title .title-line {
     width: 35px;

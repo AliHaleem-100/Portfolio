@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/default.css">
+    <link rel="stylesheet" href="css/animations.css">
     <link rel="stylesheet" href="css/contact.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
         integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
@@ -14,14 +15,15 @@
 
 <body>
     <header class="section">
-        <a class="logo" href="index.html">ALI HALEEM</a>
+        <a href="index.html" class="logo hidedElement" style="--opacity:0.1">ALI
+            HALEEM</a>
         <nav class="navbar">
-            <a href="index.html" class="nav-link">HOME</a>
-            <a href="about.html" class="nav-link">ABOUT</a>
-            <a href="contact.html" class="nav-link active">CONTACT</a>
+            <a href="index.html" class="nav-link hidedElement" style="--opacity:0.1">HOME</a>
+            <a href="about.html" class="nav-link hidedElement" style="--opacity:0.1">ABOUT</a>
+            <a href="contact.html" class="nav-link hidedElement active" style="--opacity:0.1">CONTACT</a>
         </nav>
         <!-- the background is bar-icon -->
-        <div class="bar-icon">
+        <div class="bar-icon hidedElement" style="--opacity:0.1;--translate-x:20%">
             <!-- the center adjustment is lines  -->
             <div class="lines">
                 <!-- lines are those lines -->
@@ -33,50 +35,61 @@
     </header>
     <main>
         <!-- banner -->
-        <section class="banner"><span>GET IN TOUCH</span>
+        <section class="banner"><span class="hidedElement" style="--opacity:0;--translate-y:-10%;">GET IN TOUCH</span>
             <div class="banner-circle circle"></div>
         </section>
 
         <section class="contact-section section">
             <div class="contact-circle"></div>
-            <h1 class="section-title">CONTACT</h1>
-            <form onsubmit="sendMail(); reset(); return false">
-
-                <div class="input name-input" class="input input-name">
+            <h1 class="section-title hidedElement" style="--opacity:0;--translate-y:-10%;">CONTACT</h1>
+            <form>
+                <div class=" input name-input" class="input input-name hidedElement"
+                    style="--opacity:0;--translate-y:-10%;">
                     <label for="name">NAME
                         <span class="require-sign">*</span>
                     </label>
-                    <input type="text" id="name" placeholder="e.g JOHN">
+                    <input type="text" id="name" placeholder="e.g JOHN" required>
                 </div>
 
-                <div class="input email-input">
+                <div class="input email-input hidedElement" style="--opacity:0;--translate-y:-10%;">
                     <label for="name">EMAIL
                         <span class="require-sign">*</span>
                     </label>
-                    <input type="text" id="email" placeholder="e.g example@gmail.com">
+                    <input type="text" id="email" placeholder="e.g example@gmail.com" required>
                 </div>
 
-                <div class="input message-input">
+                <div class="input message-input hidedElement" style="--opacity:0;--translate-y:-10%;">
                     <label for="name">MESSAGE
                         <span class="require-sign">*</span>
                     </label>
-                    <textarea type="text" id="message" placeholder="e.g i want to create a website, etc..."></textarea>
+                    <textarea type="text" id="message" placeholder="e.g i want to create a website, etc..."
+                        required></textarea>
                 </div>
-                <input type="submit" class="send-btn" value="Send">
+                <input type="submit" class="send-btn hidedElement" style="--opacity:0;--translate-y:-10%;" value="Send">
             </form>
 
+            <div class="receive-message-container">
+                <h1 class="submit-header">Message Sent</h1>
+                <div class="submit-body">
+                    <p class="submit-text">
+                        Your opinion means the world to us
+                    </p>
+                    <img src="IMAGES/tick.png" alt="">
+                </div>
+            </div>
             <div class="other-way">
                 <div class="other-way-title">
-                    <span class="title-line"></span>
-                    <span class="title-text">OR</span>
-                    <span class="title-line"></span>
+                    <span class="title-line hidedElement" style="--opacity:0;--translate-x:-20%;"></span>
+                    <span class="title-text hidedElement" style="--opacity:0;--translate-y:-10%;">OR</span>
+                    <span class="title-line hidedElement" style="--opacity:0;--translate-x:20%;"></span>
                 </div>
                 <div class="icons">
-                    <a href="https://www.linkedin.com/in/ali-haleem-885814251"><img src="IMAGES/linkedin.svg"
-                            alt="Linked IN"></a>
-                    <a href="https://github.com/AliHaleem-100"><img src="IMAGES/github.svg" alt="Github"></a>
-                    <a href="https://www.facebook.com/ali.haleem.5876?mibextid=ibOpuv"><img src="IMAGES/facebook.svg"
-                            alt=""></a>
+                    <a href="https://www.linkedin.com/in/ali-haleem-885814251" class="hidedElement"
+                        style="--opacity:0;--translate-x:-20%;"><img src="IMAGES/linkedin.svg" alt="Linked IN"></a>
+                    <a href="https://github.com/AliHaleem-100" class="hidedElement" style="--opacity:0;"><img
+                            src="IMAGES/github.svg" alt="Github"></a>
+                    <a href="https://www.facebook.com/ali.haleem.5876?mibextid=ibOpuv" class="hidedElement"
+                        style="--opacity:0;--translate-x:20%;"><img src="IMAGES/facebook.svg" alt=""></a>
                 </div>
             </div>
         </section>
@@ -84,9 +97,8 @@
     <footer class="section">
         <p>© 2024 Ali Haleem. All rights reserved.</p>
     </footer>
-    <script src="https://smtpjs.com/v3/smtp.js"></script>
     <script src="js/variables.js"></script>
-    <script src="js/default.js"></script>
+    <script src="js/default.js" type="module"></script>
     <script src="js/form.js"></script>
 </body>
 
