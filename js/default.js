@@ -1,32 +1,32 @@
 import { showHiddenElement } from "./tools.js";
-let hiddenEl = new showHiddenElement(hiddenElements);
 
-window.addEventListener("load", () => {
+async function LoadAllElemenet() {
+  let allElements = document.querySelectorAll(".hidedElement");
+  return allElements;
+}
+
+async function ShowHiddenEl() {
+  let allElements = [...(await LoadAllElemenet())];
+  let hiddenEl = new showHiddenElement(allElements);
   hiddenEl.showHidden();
-});
+}
+window.addEventListener("load", ShowHiddenEl);
 
 barIcon.addEventListener("click", () => {
   barIcon.classList.toggle("cross");
   navbar.classList.toggle("show");
-
-  if (banner_circle) {
-    banner_circle.classList.toggle("show");
-  }
+  banner_circle.classList.toggle("show");
 });
 
 window.addEventListener("scroll", () => {
   let scrollTop = document.documentElement.scrollTop;
   if (scrollTop > 10) {
-    hiddenEl.showHidden();
+    ShowHiddenEl();
     header.classList.add("fill-background");
   } else {
     header.classList.remove("fill-background");
   }
-  if (banner_circle) {
-    // if user scroll down
-
-    scrollTop > 106
-      ? banner_circle.classList.add("scroll")
-      : banner_circle.classList.remove("scroll");
-  }
+  scrollTop > 106
+    ? banner_circle.classList.add("scroll")
+    : banner_circle.classList.remove("scroll");
 });

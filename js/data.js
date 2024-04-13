@@ -1,4 +1,25 @@
 export const data = {
+  home: {
+    banner: {
+      heroTitle: "WEB DEVELOPER",
+      heroContent: `I am a passionate and
+      results-oriented web developer with a proven ability to design, develop, and implement innovative
+      web solutions. Leveraging the latest technologies, I create user-centric interfaces that are both
+      visually stunning and functionally robust`,
+    },
+    summary: {
+      summaryContent: `This website presents
+      the professional portfolio of Ali Haleem, a skilled web developer with a passion for innovation.
+      Here, you will find a curated selection of projects that showcase his expertise in front-end and
+      back-end. Each project is accompanied by a detailed description that highlights the specific
+      challenges addressed, the technologies utilized, and the successful outcomes achieved.
+      The website also provides an overview of Ali Haleem's technical skillset, including proficiency in
+      various programming languages and frameworks. Visitors can explore information about his personal
+      details, educational background, and contact information.
+      This portfolio serves as a testament to Ali Haleem's dedication to crafting high-quality,
+      functional, and visually appealing web applications.`,
+    },
+  },
   services_section: {
     services: [
       {
