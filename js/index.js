@@ -8,7 +8,7 @@ bannerTitle.innerHTML = data.home.banner.heroTitle;
 bannerContent.innerHTML = data.home.banner.heroContent;
 summaryContent.innerHTML = data.home.summary.summaryContent;
 
-data.services_section.services.forEach((service) => {
+data.home.services_section.services.forEach((service) => {
   let cardHTML = `
    <div class="card ${service.service_class} hidedElement" style="--opacity:${service.animationValues.opacity};--translate-y:${service.animationValues.translate_Y}%;--translate-x:${service.animationValues.translate_X}%">
    <span class="card-title">${service.service_name}</span>

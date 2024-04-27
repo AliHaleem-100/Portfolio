@@ -1,184 +1,189 @@
 /* TOOLS */
 
 .about-paragraph {
-    margin: 0 auto;
-    text-align: justify;
-    width: 80%;
-    font-weight: 200;
-    font-size: var(--paragraph-fontSize);
+  margin: 0 auto;
+  text-align: justify;
+  width: 80%;
+  font-weight: 200;
+  font-size: var(--paragraph-fontSize);
 }
 
 /* TOOLS END */
 
 header .navbar .nav-link {
-    color: var(--secondary-color);
+  color: var(--secondary-color);
 }
 
 header .navbar .nav-link.active::after {
-    background: var(--secondary-color);
+  background: var(--secondary-color);
+}
+
+header.fill-background .nav-link {
+  color: var(--primary-color);
 }
 
 .banner {
-    background: var(--primary-color);
-    padding-block: 150px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+  background: var(--primary-color);
+  padding-block: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 .banner-title {
-    color: var(--secondary-color);
+  color: var(--secondary-color);
 }
 
 .banner-paragraph {
-    color: var(--secondary-color);
-    font-style: italic;
+  color: var(--secondary-color);
+  font-style: italic;
 }
 
 /* WHO AM I */
 .whoAmI-section {
-    background: var(--secondary-color);
-    padding-block: 50px;
+  background: var(--secondary-color);
+  padding-block: 50px;
 }
 
 /* SKILLS SECTION*/
 
 .skills-section {
-    background-color: var(--light-secondary-color);
-    padding-block: 40px;
+  background-color: var(--light-secondary-color);
+  padding-block: 40px;
 }
 
 .skills-categories {
-    width: 80%;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    gap: 50px;
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
 }
 
 .category-title {
-    display: inline-block;
-    /* text-indent: 150px; */
-    margin-bottom: 20px;
-    font-size: 10px;
-    font-weight: 600;
-    color: var(--primary-color);
+  display: inline-block;
+  /* text-indent: 150px; */
+  margin-bottom: 20px;
+  font-size: 10px;
+  font-weight: 600;
+  color: var(--primary-color);
 }
 
 .skill-category .skills {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    gap: 30px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 30px;
 }
 
 .skills .skill {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    /* flex-direction: column; */
-    gap: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* flex-direction: column; */
+  gap: 50px;
 }
 
 .skills .skill .skill-name {
-    font-size: 15px;
-    width: 100px;
-    font-weight: 600;
+  font-size: 15px;
+  width: 100px;
+  font-weight: 600;
 }
 
 .skills .skill .input-and-percentage {
-    flex: 1;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 70px;
+  flex: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 70px;
 }
 
 .skills .skill .skill-bar {
-    width: 500px;
-    height: 15px;
-    background: #fff;
-    border-radius: 50px;
-    position: relative;
-    overflow: hidden;
+  width: 500px;
+  height: 15px;
+  background: #fff;
+  border-radius: 50px;
+  position: relative;
+  overflow: hidden;
 }
 
 .skills .skill .skill-bar::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: var(--bar-width);
-    height: 100%;
-    background: var(--primary-color);
-    border-radius: 50px;
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: var(--bar-width);
+  height: 100%;
+  background: var(--primary-color);
+  border-radius: 50px;
 }
 
 .skills .skill .skill-percentage {
-    padding: 8px 10px;
-    border-radius: 50px;
-    font-size: var(--paragraph-fontSize);
-    color: var(--secondary-color);
-    background: var(--primary-color);
+  padding: 8px 10px;
+  border-radius: 50px;
+  font-size: var(--paragraph-fontSize);
+  color: var(--secondary-color);
+  background: var(--primary-color);
 }
 
 @media (max-width: 992px) {
-    .skills .skill .input-and-percentage {
-        width: 100%;
-    }
+  .skills .skill .input-and-percentage {
+    width: 100%;
+  }
 
-    .skills .skill {
-        gap: 5px;
-        margin: 0 auto;
-        flex-direction: column;
-        align-items: flex-start;
-        width: 100%;
-    }
+  .skills .skill {
+    gap: 5px;
+    margin: 0 auto;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+  }
 }
 
 @media (max-width: 768px) {
-    header .navbar .nav-link {
-        color: var(--primary-color);
-    }
+  header .navbar .nav-link {
+    color: var(--primary-color);
+  }
 
-    .skills-categories {
-        width: 100%;
-    }
+  .skills-categories {
+    width: 100%;
+  }
 
-    .skill-category .skills {
-        gap: 0;
-    }
+  .skill-category .skills {
+    gap: 0;
+  }
 
-    .skill-category .skills .skill {
-        margin-block: 10px;
-    }
+  .skill-category .skills .skill {
+    margin-block: 10px;
+  }
 
-    .skills .skill .skill-bar {
-        width: 100%;
-    }
+  .skills .skill .skill-bar {
+    width: 100%;
+  }
 
-    .banner .banner-circle {
-        position: fixed;
-        right: 30px;
-        top: 10px;
-        width: 50px;
-        height: 50px;
-        visibility: hidden;
-        background: var(--secondary-color);
-        border-radius: 50%;
-    }
+  .banner .banner-circle {
+    position: fixed;
+    right: 30px;
+    top: 10px;
+    width: 50px;
+    height: 50px;
+    visibility: hidden;
+    background: var(--secondary-color);
+    border-radius: 50%;
+  }
 }
 
 @media (max-width: 568px) {
-    .about-paragraph {
-        width: 100%;
-    }
+  .about-paragraph {
+    width: 100%;
+  }
 
-    .skills .skill .input-and-percentage {
-        /* flex-direction: column; */
-        gap: 10px;
-    }
+  .skills .skill .input-and-percentage {
+    /* flex-direction: column; */
+    gap: 10px;
+  }
 }
 
-@media (max-width: 480px) {}
+@media (max-width: 480px) {
+}

@@ -17,3 +17,17 @@ export class showHiddenElement {
     });
   }
 }
+
+export function GetDistance({ firstX, secondX, firstY, secondY }) {
+  let FirstXPos = parseInt(firstX.replace("px", ""));
+  let FirstYPos = parseInt(firstY.replace("px", ""));
+  let SecXPos = secondX;
+  let SecYPos = secondY;
+  return Math.sqrt(
+    Math.pow(SecXPos - FirstXPos, 2) + Math.pow(FirstYPos - SecYPos, 2)
+  );
+}
+
+export function AddContent(element, content) {
+  element.innerHTML = content;
+}

@@ -10,6 +10,9 @@ header .navbar .nav-link.active::after {
   background: var(--secondary-color);
 }
 
+header.fill-background .nav-link {
+  color: var(--primary-color);
+}
 /* banner */
 .banner {
   width: 100%;
@@ -31,7 +34,6 @@ header .navbar .nav-link.active::after {
   isolation: isolate;
   overflow-x: hidden;
 }
-
 
 .contact-circle {
   position: absolute;
@@ -187,12 +189,17 @@ form .send-btn {
   gap: 50px;
 }
 
-.icons img {
-  width: 50px;
-  height: 50px;
+.icons i {
+  font-size: 50px;
+  color: var(--primary-color);
+  transition: 0.3s;
+}
+.icons i:hover {
+  color: var(--hoverColor);
 }
 
-@media (max-width: 992px) {}
+@media (max-width: 992px) {
+}
 
 @media (max-width: 768px) {
   header .navbar .nav-link {
@@ -216,7 +223,6 @@ form .send-btn {
     opacity: 1;
     color: var(--primary-color);
   }
-
 }
 
 @media (max-width: 591px) {
@@ -228,13 +234,14 @@ form .send-btn {
     width: 1000px;
   }
 
-
   .other-way .other-way-title .title-line {
     width: 35px;
     height: 4px;
   }
 }
 
-@media (max-width: 568px) {}
+@media (max-width: 568px) {
+}
 
-@media (max-width: 480px) {}
+@media (max-width: 480px) {
+}

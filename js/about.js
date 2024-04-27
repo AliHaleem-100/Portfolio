@@ -1,4 +1,9 @@
 import { data } from "./data.js";
+import { AddContent } from "./tools.js";
+
+AddContent(bitInfo, data.about.bit_information);
+AddContent(who_am_i_paragraph, data.about.who_am_i);
+
 async function AddingSKills(skills) {
   let skillsHTML = [];
   skills.forEach((skill) => {
@@ -15,7 +20,7 @@ async function AddingSKills(skills) {
   return skillsHTML;
 }
 
-data.skills_section.skill_categories.forEach(async (SKC) => {
+data.about.skills_section.skill_categories.forEach(async (SKC) => {
   let skills = await AddingSKills(SKC.skills);
   const skills_category = `<div class="skill-category hidedElement progressAnimation">
         <span class="category-title">${SKC.skills_category_name}</span>
