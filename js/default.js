@@ -30,7 +30,3 @@ window.addEventListener("scroll", () => {
     ? banner_circle.classList.add("scroll")
     : banner_circle.classList.remove("scroll");
 });
-
-window.addEventListener("mousemove", (e) => {
-  console.log(document.querySelectorAll(".nav-link"));
-});
