@@ -1,7 +1,7 @@
 import { showHiddenElement } from "./tools.js";
 
 window.addEventListener("load", () => {
-  document.querySelector(".pre-loader").remove();
+  document.querySelector(".pre-loader").style.display = "none";
 });
 
 async function LoadAllElemenet() {
