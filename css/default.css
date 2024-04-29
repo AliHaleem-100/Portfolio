@@ -51,6 +51,20 @@ body::-webkit-scrollbar-thumb {
   padding-inline: var(--main-inline-padding);
 }
 
+.pre-loader {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  background: black;
+  z-index: 100;
+  display: grid;
+  place-items: center;
+}
+.pre-loader img {
+  width: 200px;
+}
 header {
   position: fixed;
   width: 100%;
