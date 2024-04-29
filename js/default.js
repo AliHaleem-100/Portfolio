@@ -1,19 +1,16 @@
 import { showHiddenElement } from "./tools.js";
 
-window.addEventListener("load", () => {
-  document.querySelector(".pre-loader").style.display = "none";
-});
-
-async function LoadAllElemenet() {
+function LoadAllElemenet() {
   let allElements = document.querySelectorAll(".hidedElement");
   return allElements;
 }
 
 async function ShowHiddenEl() {
-  let allElements = [...(await LoadAllElemenet())];
+  let allElements = LoadAllElemenet();
   let hiddenEl = new showHiddenElement(allElements);
   hiddenEl.showHidden();
 }
+
 window.addEventListener("load", ShowHiddenEl);
 
 barIcon.addEventListener("click", () => {
