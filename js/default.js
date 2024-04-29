@@ -1,24 +1,12 @@
 import { showHiddenElement } from "./tools.js";
 
-function LoadAllElemenet() {
-  let allElements = document.querySelectorAll(".hidedElement");
-  return allElements;
-}
-
 async function ShowHiddenEl() {
-  let allElements = LoadAllElemenet();
-  let hiddenEl = new showHiddenElement(allElements);
+  let hiddenEl = new showHiddenElement(
+    document.querySelectorAll(".hidedElement")
+  );
   hiddenEl.showHidden();
 }
-
 window.addEventListener("load", ShowHiddenEl);
-
-barIcon.addEventListener("click", () => {
-  barIcon.classList.toggle("cross");
-  navbar.classList.toggle("show");
-  banner_circle.classList.toggle("show");
-});
-
 window.addEventListener("scroll", () => {
   let scrollTop = document.documentElement.scrollTop;
   if (scrollTop > 10) {
@@ -30,4 +18,10 @@ window.addEventListener("scroll", () => {
   scrollTop > 106
     ? banner_circle.classList.add("scroll")
     : banner_circle.classList.remove("scroll");
+});
+
+barIcon.addEventListener("click", () => {
+  barIcon.classList.toggle("cross");
+  navbar.classList.toggle("show");
+  banner_circle.classList.toggle("show");
 });

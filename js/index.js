@@ -1,5 +1,4 @@
 import { data } from "./data.js";
-import { showHiddenElement } from "./tools.js";
 let bannerTitle = document.querySelector(".banner-title");
 let bannerContent = document.querySelector(".banner-paragraph");
 let summaryContent = document.querySelector(".summary-paragraph");
